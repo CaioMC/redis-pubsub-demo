@@ -1,0 +1,18 @@
+server:
+  address: 127.0.0.1
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: redis-pubsub-demo
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+  mvc:
+    async:
+      request-timeout: -1
+
+demo:
+  room:
+    instance-id: ${INSTANCE_ID:instancia-${server.port}}
